@@ -25,6 +25,7 @@ function getRandomCard() {
     return randomNumber
   }
 }
+window.getRandomCard = getRandomCard
 
 function startGame() {
   isAlive = true
@@ -34,6 +35,7 @@ function startGame() {
   sum = firstCard + secondCard
   renderGame()
 }
+window.startGame = startGame
 
 function renderGame() {
   cardsEl.textContent = "Cards: "
@@ -53,6 +55,7 @@ function renderGame() {
   }
   messageEl.textContent = message
 }
+window.renderGame = renderGame
 
 function newCard() {
   if (isAlive === true && hasBlackJack === false) {
@@ -62,3 +65,4 @@ function newCard() {
     renderGame()
   }
 }
+window.newCard = newCard
